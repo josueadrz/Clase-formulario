@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+      <h1>Formulario de Registro</h1>
+  </header>  
+  <main>
+      <section>
+          <h2>Datos Principales</h2>
+      </section>
+      <!--subimit = accion de enviar datos-->
+      <!-- form: sirve como envoltura para los elementos input-->
+      <form>
+          <label for="nombres">Nombres:</label>
+          <input 
+          type="tex"
+          placeholder="Ej. Sonia Andrea"
+          id="nombres"
+          minlength="2"
+          >
+          <br>
+          <label for="apellidos">Apellidos</label>
+          <input
+          type="text"
+          placeholder="Ej. Pereyra castilla"
+          id="apellidos"
+          required
+          maxlength="15"
+          >
+          <br>
+          <label>email:</label>
+          <input
+          type="email"
+          placeholder="ingrese su correo"
+          >
+          <br>
+          <label for="contraseña">Contraseña:</label>
+          <input 
+          type="password"
+          placeholder="Ingrese una contreseña segura"
+          id="contraseña"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+          >
+          <br>
+          <label for="edad">Edad:</label>
+          <input
+          type="number"
+          placeholder="Ingrese su edad"
+          id="edad"
+          min="1"
+          max="99"
+          >
+          <!-- -->
+          <br>
+          <label>Genero</label>
+          <br>
+          <input
+            type="radio"
+            id="rmasculino"
+            name="genero"
+            value="M"
+          >
+          <label for="rmasculino">Masculino</label>
+          <br>
+          <input
+            type="radio"
+            id="rfemenino"
+            name="genero"
+            value="F"
+          >
+          <label for="rfemenino">Femenino</label>
+          <br>
+          <input
+            type="radio"
+            id="nc"
+            name="genero"
+            value="NC"
+          >
+          <label for="nc">No Compartir</label>
+          <!-- -->
+          <br>
+          <label>Hobies</label>
+        
+          <br>
+          <input
+            type="checkbox"
+            value="musica"
+            id="ch_musica"
+          >
+          <label for="ch_musica">Escuchar música</label>
+          <input
+            type="checkbox"
+            value="memes"
+            disabled
+        >ver memes
+        <input
+            type="checkbox"
+            value="cocinar"
+        >cocinar
+        <input
+            type="checkbox"
+            value="ejercicio"
+        >hacer ejercicio
+        <input
+            type="checkbox"
+            value="peliculas"
+        >ver peliculas
+        <input
+            type="checkbox"
+            value="programar"
+        >hacer proyectitos
+        <input
+            type="checkbox"
+            value="leer"
+        >leer
+        <!-- -->
+        <br> <br>
+        <label>Cuidad</label>
+        <br>
+        <select>
+            <option
+              selected
+              disabled
+            >Selecione una opción
+
+            </option>
+            <option value="AM">
+                Amazonas
+            </option>
+            <option value="AR">
+                Arequipa
+            </option>
+            <option value="AP">
+                Apurimac
+            </option>
+            <option value="CU">
+                Cusco
+            </option>
+            <option value="LI">
+                Lima
+            </option>
+            <option value="AY">
+                Ayacucho
+            </option>
+            <option value="AN">
+                Ancash
+            </option>
+            <option value="LA">
+                Lambayeque
+            </option>
+            <option value="HU">
+               Huanuco
+            </option>
+        </select>
+        <!-- -->
+        <br>
+        <label>Distritos</label>
+        <br>
+        <input list="distritos">
+        <!-- una fuente de datos-->
+        <datalist id="distritos">
+            <option value="Lima">
+                Lima
+            </option>
+            <option value="Pueblo Libre">
+                Pueblo libre
+            </option>
+            <option value="Jesus Maria">
+                Jesus Maria
+            </option>
+            <option value="Lince">
+                Lince
+            </option>
+        </datalist>
+        <br>
+        <label>Fecha Nac.</label>
+        <input type="date">
+        <br>
+        <label>Color favorito</label>
+        <input type="color">
+        <hr>
+        <input type="reset" value="limpiar formulario">
+        <input type="submit" value="enviar datos">
+
+
+      </form>
+  </main>
+</body>
+</html>
